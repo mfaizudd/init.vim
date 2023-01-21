@@ -61,4 +61,5 @@ return require('packer').startup(function(use)
             }
         end,
     }
+    use 'andweeb/presence.nvim'
 end)
