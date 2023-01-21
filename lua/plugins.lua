@@ -49,4 +49,7 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use 'cohama/lexima.vim'
+    use 'preservim/nerdtree'
+    use 'kdheepak/lazygit.nvim'
 end)
