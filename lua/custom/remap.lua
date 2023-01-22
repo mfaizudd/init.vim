@@ -15,3 +15,8 @@ vim.keymap.set("i", "<A-j>", "<esc>:m .+1<cr>==gi")
 vim.keymap.set("i", "<A-k>", "<esc>:m .-2<cr>==gi")
 vim.keymap.set("v", "<A-j>", ":m '>+1<cr>gv=gv")
 vim.keymap.set("v", "<A-k>", ":m '<-2<cr>gv=gv")
+
+local vm_maps                 = {}
+vm_maps["Find Under"]         = "<A-d>"
+vm_maps["Find Subword Under"] = "<A-d>"
+vim.g.VM_maps                 = vm_maps
