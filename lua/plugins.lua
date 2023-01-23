@@ -69,4 +69,6 @@ return require('packer').startup(function(use)
     }
     use 'mg979/vim-visual-multi'
     use 'numToStr/Comment.nvim'
+    use 'simrat39/rust-tools.nvim'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 end)
