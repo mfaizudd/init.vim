@@ -25,6 +25,9 @@ nmap("<leader>ee", ":NERDTree<cr>", "[E]xplorer")
 nmap("<leader>w", vim.cmd.w, "[W]rite")
 nmap("<leader>q", ":q<cr>", "[Q]uit")
 nmap("<leader>h", ":noh<cr>", "No [H]ighlight")
+nmap("<leader>tt", ":ToggleTerm<cr>", "[T]oggle [T]erminal")
+nmap("<leader>so", ":SymbolsOutline<cr>", "[S]ymbols [O]utline")
+nmap("<leader>sv", ":source $MYVIMRC<cr>", "[S]ource [V]imrc")
 
 -- Line movement
 nmap("<A-j>", ":m .+1<cr>==", "Move line up")
