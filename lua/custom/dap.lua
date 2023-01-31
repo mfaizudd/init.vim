@@ -1,6 +1,7 @@
 local dapui = require("dapui")
 local dap = require("dap")
 dapui.setup()
+
 -- Keymappings
 vim.keymap.set("n", "<leader>dt", dapui.toggle)
 vim.keymap.set("n", "<leader>db", dap.toggle_breakpoint)
