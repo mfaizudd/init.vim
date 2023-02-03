@@ -31,6 +31,7 @@ nmap("<leader>sv", ":source $MYVIMRC<cr>", "[S]ource [V]imrc")
 nmap("<leader>slh", ":set laststatus=0<cr>", "[S]tatus[l]ine [H]ide")
 nmap("<leader>sls", ":set laststatus=2<cr>", "[S]tatus[l]ine [S]how")
 nmap("<leader>sm", ":Mason<cr>", "[S]how [M]ason")
+vmap("<leader>vp", "\"_dP", "[V]oid [P]aste")
 
 -- Line movement
 nmap("<A-j>", ":m .+1<cr>==", "Move line up")

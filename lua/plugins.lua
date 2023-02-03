@@ -74,5 +74,6 @@ return require('packer').startup(function(use)
     use 'akinsho/toggleterm.nvim'
     use 'simrat39/symbols-outline.nvim'
     use 'ryanoasis/vim-devicons'
+    use 'jwalton512/vim-blade'
 end)
 
