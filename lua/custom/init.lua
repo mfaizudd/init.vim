@@ -7,4 +7,4 @@ require("custom.rt")
 require("custom.options")
 require("toggleterm").setup()
 require("symbols-outline").setup()
-
+require("git-conflict").setup()
