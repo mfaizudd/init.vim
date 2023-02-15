@@ -85,4 +85,5 @@ return require('packer').startup(function(use)
                 "MunifTanjim/nui.nvim",
             }
         }
+        use { "catppuccin/nvim", as = "catppuccin" }
     end)

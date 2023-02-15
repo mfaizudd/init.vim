@@ -13,4 +13,4 @@ set smartcase
 lua require('plugins')
 lua require('lsp')
 lua require('custom')
-colorscheme nord
+colorscheme catppuccin

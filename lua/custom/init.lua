@@ -8,3 +8,6 @@ require("custom.options")
 require("toggleterm").setup()
 require("symbols-outline").setup()
 require("git-conflict").setup()
+require("catppuccin").setup({
+    transparent_background = true,
+})
