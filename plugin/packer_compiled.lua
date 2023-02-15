@@ -125,6 +125,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Bandeng\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["git-conflict.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Bandeng\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\git-conflict.nvim",
+    url = "https://github.com/akinsho/git-conflict.nvim"
+  },
   ["lazygit.nvim"] = {
     loaded = true,
     path = "C:\\Users\\Bandeng\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lazygit.nvim",
@@ -155,15 +160,20 @@ _G.packer_plugins = {
     path = "C:\\Users\\Bandeng\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  nerdtree = {
+  ["neo-tree.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\Bandeng\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nerdtree",
-    url = "https://github.com/preservim/nerdtree"
+    path = "C:\\Users\\Bandeng\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neo-tree.nvim",
+    url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
   },
   ["nord-vim"] = {
     loaded = true,
     path = "C:\\Users\\Bandeng\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nord-vim",
     url = "https://github.com/arcticicestudio/nord-vim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\Bandeng\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
