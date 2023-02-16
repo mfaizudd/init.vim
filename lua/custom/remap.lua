@@ -8,8 +8,12 @@ local vmap = function(keys, func, desc)
     vim.keymap.set('v', keys, func, { buffer = bufnr, desc = desc })
 end
 
--- My custom keymap
 vim.g.mapleader = " "
+
+-- Send to system clipboard over ssh
+vmap("<leader>y", ":OSCYank<cr>", "Yank to system clipboard")
+
+-- My custom keymap
 nmap("<leader>ex", vim.cmd.Ex, "Open net rw")
 nmap("<leader>sf", ":Telescope find_files<cr>", "[S]earch [F]iles")
 nmap("<leader>sh", ":Telescope find_files hidden=true<cr>", "[S]earch [H]idden Files")

@@ -266,6 +266,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Bandeng\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-oscyank"] = {
+    loaded = true,
+    path = "C:\\Users\\Bandeng\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-oscyank",
+    url = "https://github.com/ojroques/vim-oscyank"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "C:\\Users\\Bandeng\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-surround",
