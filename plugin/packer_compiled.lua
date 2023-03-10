@@ -170,6 +170,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\Bandeng\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
   },
+  ["neofsharp.vim"] = {
+    loaded = true,
+    path = "C:\\Users\\Bandeng\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neofsharp.vim",
+    url = "https://github.com/adelarsq/neofsharp.vim"
+  },
   ["nord-vim"] = {
     loaded = true,
     path = "C:\\Users\\Bandeng\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nord-vim",
