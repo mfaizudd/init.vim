@@ -11,7 +11,7 @@ end
 vim.g.mapleader = " "
 
 -- Send to system clipboard over ssh
-vmap("<leader>y", ":OSCYank<cr>", "Yank to system clipboard")
+vmap("<leader>y", ":OSCYankVisual<cr>", "Yank to system clipboard")
 
 -- My custom keymap
 nmap("<leader>ex", vim.cmd.Ex, "Open net rw")
