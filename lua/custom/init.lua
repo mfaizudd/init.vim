@@ -12,3 +12,4 @@ require("catppuccin").setup({
     transparent_background = true,
 })
 require("custom.snippets")
+require("custom.devicons")
