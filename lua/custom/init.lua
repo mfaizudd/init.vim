@@ -11,3 +11,4 @@ require("git-conflict").setup()
 require("catppuccin").setup({
     transparent_background = true,
 })
+require("custom.devicons")
