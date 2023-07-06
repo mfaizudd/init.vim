@@ -60,8 +60,6 @@ return require('packer').startup(function(use)
             }
         end,
     }
-    use 'andweeb/presence.nvim'
-    use 'github/copilot.vim'
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true },
