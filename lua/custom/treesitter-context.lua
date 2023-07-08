@@ -1,0 +1,5 @@
+local tc = require('treesitter-context')
+tc.setup()
+vim.keymap.set("n", "[c", function()
+    tc.go_to_context()
+end, { silent = true })
