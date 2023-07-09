@@ -42,6 +42,9 @@ dap.adapters.codelldb = {
         -- detached = false,
     }
 }
+dap.adapters.c = dap.adapters.codelldb
+dap.adapters.cpp = dap.adapters.codelldb
+dap.adapters.rust = dap.adapters.codelldb
 
 dap.configurations.cpp = {
     {
@@ -55,6 +58,5 @@ dap.configurations.cpp = {
         stopOnEntry = false,
     },
 }
-
 dap.configurations.c = dap.configurations.cpp
 dap.configurations.rust = dap.configurations.cpp
