@@ -74,15 +74,6 @@ return require('packer').startup(function(use)
     use 'jwalton512/vim-blade'
     use 'akinsho/git-conflict.nvim'
 
-    use {
-        "nvim-neo-tree/neo-tree.nvim",
-        branch = "v2.x",
-        requires = {
-            "nvim-lua/plenary.nvim",
-            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-            "MunifTanjim/nui.nvim",
-        }
-    }
     use { "catppuccin/nvim", as = "catppuccin" }
     use 'ojroques/vim-oscyank'
     use 'adelarsq/neofsharp.vim'
@@ -91,4 +82,7 @@ return require('packer').startup(function(use)
         requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
     }
     use "nvim-treesitter/nvim-treesitter-context"
+    use "nvim-tree/nvim-tree.lua"
+    use 'lewis6991/gitsigns.nvim'
+    use 'romgrk/barbar.nvim'
 end)

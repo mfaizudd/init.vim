@@ -13,3 +13,5 @@ require("catppuccin").setup({
 })
 require("custom.snippets")
 require("custom.devicons")
+require("custom.nvim-tree")
+require("custom.barbar")
