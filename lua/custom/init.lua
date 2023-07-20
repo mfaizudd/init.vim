@@ -9,7 +9,7 @@ require("toggleterm").setup()
 require("symbols-outline").setup()
 require("git-conflict").setup()
 require("catppuccin").setup({
-    transparent_background = true,
+    -- transparent_background = true,
 })
 require("custom.snippets")
 require("custom.devicons")
