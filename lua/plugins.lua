@@ -40,7 +40,6 @@ return require('packer').startup(function(use)
     }
 
     use 'tpope/vim-surround'
-    use 'wakatime/vim-wakatime'
     use 'tpope/vim-fugitive'
     use 'arcticicestudio/nord-vim'
 
