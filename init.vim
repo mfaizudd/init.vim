@@ -10,6 +10,8 @@ set shiftwidth=4
 set softtabstop=4
 set ignorecase
 set smartcase
+set colorcolumn=80
+set nowrap
 lua require('plugins')
 lua require('lsp')
 lua require('custom')
