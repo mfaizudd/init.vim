@@ -8,9 +8,9 @@ require("custom.options")
 require("toggleterm").setup()
 require("custom.symbols-outline")
 require("git-conflict").setup()
-require("catppuccin").setup({
-    -- transparent_background = true,
-})
+-- require("catppuccin").setup({
+--     transparent_background = true,
+-- })
 require("custom.snippets")
 require("custom.devicons")
 require("custom.nvim-tree")
