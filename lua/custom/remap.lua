@@ -6,7 +6,7 @@ vim.g.mapleader = " "
 map.v("<leader>y", ":OSCYankVisual<cr>", "Yank to system clipboard")
 
 -- My custom keymap
-map.n("<leader>ex", vim.cmd.Ex, "Open net rw")
+map.n("<leader>ne", vim.cmd.Ex, "Open [N]etrw [E]xplorer")
 map.n("<leader>sf", ":Telescope find_files<cr>", "[S]earch [F]iles")
 map.n("<leader>sh", ":Telescope find_files hidden=true<cr>", "[S]earch [H]idden Files")
 map.n("<leader>sc", ":Telescope commands<cr>", "[S]earch [C]ommands")
@@ -28,7 +28,7 @@ map.n("<leader>slh", ":set laststatus=0<cr>", "[S]tatus[l]ine [H]ide")
 map.n("<leader>sls", ":set laststatus=2<cr>", "[S]tatus[l]ine [S]how")
 map.n("<leader>sm", ":Mason<cr>", "[S]how [M]ason")
 map.v("<leader>vp", "\"_dP", "[V]oid [P]aste")
-map.n("<leader>fb", ":Telescope file_browser<cr>", "[F]ile [B]rowser")
+map.n("<leader>fe", ":Telescope file_browser<cr>", "[F]ile [E]xplorer")
 map.n("<leader>bq", ":BufferCloseAllButVisible<cr>", "[B]uffer [Q]uit All but Visible")
 
 -- Bufferline
