@@ -49,7 +49,7 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use 'cohama/lexima.vim'
-    use 'kdheepak/lazygit.nvim'
+    use 'is0n/fm-nvim'
     use {
         "Pocco81/auto-save.nvim",
         config = function()
