@@ -15,5 +15,5 @@ set nowrap
 lua require('plugins')
 lua require('lsp')
 lua require('custom')
-colorscheme base16-eighties
+colorscheme catppuccin
 autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
