@@ -83,7 +83,6 @@ return require('packer').startup(function(use)
     use "nvim-treesitter/nvim-treesitter-context"
     use "nvim-tree/nvim-tree.lua"
     use 'lewis6991/gitsigns.nvim'
-    use 'romgrk/barbar.nvim'
     use 'RRethy/nvim-base16'
     use 'xiyaowong/transparent.nvim'
 end)
