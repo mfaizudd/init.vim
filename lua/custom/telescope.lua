@@ -6,7 +6,14 @@ telescope.setup {
         },
         file_browser = {
             initial_mode = "normal",
+        },
+        buffers = {
+            mappings = {
+                n = {
+                    ['<C-d>'] = require('telescope.actions').delete_buffer
+                }
+            }
         }
     }
 }
-require("telescope").load_extension "file_browser"
+telescope.load_extension "file_browser"
