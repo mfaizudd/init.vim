@@ -66,7 +66,7 @@ return require('packer').startup(function(use)
     use 'mg979/vim-visual-multi'
     use 'numToStr/Comment.nvim'
     use 'simrat39/rust-tools.nvim'
-    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
     use 'akinsho/toggleterm.nvim'
     use 'simrat39/symbols-outline.nvim'
     use 'ryanoasis/vim-devicons'
