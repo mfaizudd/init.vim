@@ -70,6 +70,16 @@ lspconfig.tsserver.setup {
     single_file_support = false
 }
 
+lspconfig.rust_analyzer.setup {
+    settings = {
+        ['rust-analyzer'] = {
+            diagnostics = {
+                enable = false;
+            }
+        }
+    }
+}
+
 lsp.on_attach(function(client, bufnr)
     -- see :help lsp-zero-keybindings
     -- to learn the available actions
