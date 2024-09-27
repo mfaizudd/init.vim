@@ -39,6 +39,8 @@ cmp.setup({
         ['<C-y>'] = cmp.mapping.confirm({ select = true }),
         ['<cr>'] = cmp.mapping.confirm({ select = true }),
         ["<C-Space>"] = cmp.mapping.complete(),
+        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
     }),
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
@@ -58,13 +60,14 @@ vim.diagnostic.config({
     virtual_text = true,
 })
 
+-- Start LSPs Config
 -- Denoland
 lspconfig.denols.setup {
     on_attach = on_attach,
     root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
 }
 
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
     on_attach = on_attach,
     root_dir = lspconfig.util.root_pattern("package.json"),
     single_file_support = false
@@ -154,6 +157,11 @@ lspconfig.omnisharp.setup {
       },
     },
 }
+
+lspconfig.lemminx.setup{}
+lspconfig.clangd.setup{}
+
+-- End LSP Configs
 
 lsp.on_attach(function(client, bufnr)
     -- see :help lsp-zero-keybindings

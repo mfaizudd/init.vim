@@ -86,4 +86,5 @@ return require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
     use 'RRethy/nvim-base16'
     use 'xiyaowong/transparent.nvim'
+    use 'romgrk/barbar.nvim'
 end)
