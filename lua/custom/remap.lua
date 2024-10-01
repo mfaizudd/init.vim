@@ -33,8 +33,10 @@ map.n("<leader>fe", ":Telescope file_browser<cr>", "[F]ile [E]xplorer")
 map.n("<leader>bq", ":BufferCloseAllButVisible<cr>", "[B]uffer [Q]uit All but Visible")
 
 -- Bufferline
-map.n("<A-h>", ":bprev<cr>", "Previous buffer")
-map.n("<A-l>", ":bnext<cr>", "Next buffer")
+map.n("<A-h>", ":BufferPrevious<cr>", "Previous buffer")
+map.n("<A-l>", ":BufferNext<cr>", "Next buffer")
+map.n("<A-<>", ":BufferMovePrevious<cr>", "Move buffer back")
+map.n("<A->>", ":BufferMoveNext<cr>", "Move buffer forward")
 map.n("<A-q>", ":bp<bar>sp<bar>bn<bar>bd<cr>", "Close buffer")
 
 -- Line movement
