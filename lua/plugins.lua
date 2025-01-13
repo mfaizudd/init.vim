@@ -87,4 +87,5 @@ return require('packer').startup(function(use)
     use 'RRethy/nvim-base16'
     use 'xiyaowong/transparent.nvim'
     use 'romgrk/barbar.nvim'
+    use 'NoahTheDuke/vim-just'
 end)
