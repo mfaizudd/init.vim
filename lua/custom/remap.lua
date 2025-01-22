@@ -36,9 +36,10 @@ map.n("<leader>bq", ":BufferCloseAllButVisible<cr>", "[B]uffer [Q]uit All but Vi
 -- Bufferline
 map.n("<A-h>", ":BufferPrevious<cr>", "Previous buffer")
 map.n("<A-l>", ":BufferNext<cr>", "Next buffer")
-map.n("<A-<>", ":BufferMovePrevious<cr>", "Move buffer back")
-map.n("<A->>", ":BufferMoveNext<cr>", "Move buffer forward")
-map.n("<A-q>", ":bp<bar>sp<bar>bn<bar>bd<cr>", "Close buffer")
+map.n("<A-H>", ":BufferMovePrevious<cr>", "Move buffer back")
+map.n("<A-L>", ":BufferMoveNext<cr>", "Move buffer forward")
+map.n("<A-q>", ":BufferClose<cr>", "Close buffer")
+-- map.n("<A-q>", ":bp<bar>sp<bar>bn<bar>bd<cr>", "Close buffer")
 
 -- Line movement
 map.n("<A-j>", ":m .+1<cr>==", "Move line up")
