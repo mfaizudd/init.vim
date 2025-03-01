@@ -1,4 +1,4 @@
-local map = require("custom.mapfn")
+local map = require("config.mapfn")
 
 vim.g.mapleader = " "
 
@@ -15,7 +15,7 @@ map.n("<leader>ss", ":Telescope live_grep<cr>", "[S]earch [S]tring")
 map.n("<leader>sk", ":Telescope keymaps<cr>", "[S]earch [K]eymaps")
 map.n("<leader>pd", ":Telescope diagnostics<cr>", "[P]roject [D]iagnostics")
 map.n("<leader>pt", ":Trouble<cr>", "[P]roject [T]rouble")
-map.n("<leader>lg", ":Lazygit<cr>", "[L]azy[G]it")
+map.n("<leader>lg", ":LazyGit<cr>", "[L]azy[G]it")
 map.n("<leader>gu", ":Gitui<cr>", "[G]it[U]i")
 map.n("<leader>ff", function() vim.lsp.buf.format { async = true } end, "[F]ormat [F]ile")
 map.n("<leader>ee", ":NvimTreeToggle<cr>", "[E]xplorer")
