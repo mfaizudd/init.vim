@@ -151,6 +151,7 @@ lspconfig.lemminx.setup {}
 lspconfig.clangd.setup {}
 lspconfig.zls.setup {}
 lspconfig.pyright.setup {}
+lspconfig.nil_ls.setup{}
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
