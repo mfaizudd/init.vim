@@ -105,7 +105,7 @@ lspconfig.lua_ls.setup {
 }
 
 lspconfig.omnisharp.setup {
-    cmd = { "OmniSharp" },
+    cmd = { "omnisharp" },
 
     settings = {
         FormattingOptions = {

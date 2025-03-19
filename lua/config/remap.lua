@@ -32,6 +32,7 @@ map.n("<leader>sm", ":Mason<cr>", "[S]how [M]ason")
 map.v("<leader>vp", "\"_dP", "[V]oid [P]aste")
 map.n("<leader>fe", ":Telescope file_browser<cr>", "[F]ile [E]xplorer")
 map.n("<leader>bq", ":BufferCloseAllButVisible<cr>", "[B]uffer [Q]uit All but Visible")
+map.n("<leader>u", vim.cmd.UndotreeToggle, "[U]ndotree")
 
 -- Bufferline
 map.n("<A-h>", ":BufferPrevious<cr>", "Previous buffer")
@@ -57,6 +58,12 @@ map.n("gd", vim.lsp.buf.definition, "LSP: [G]o to [D]efinition")
 map.n("K", vim.lsp.buf.hover, "LSP: [K]eyword")
 map.n("gi", vim.lsp.buf.implementation, "LSP: [G]o to [I]mplementation")
 map.n("<C-k>", vim.lsp.buf.signature_help, "LSP: [C]ompletion [K]eyword")
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "cs",
+  callback = function(event)
+    vim.keymap.set("n", "gd", require("omnisharp_extended").telescope_lsp_definition, { buffer = event.buf })
+  end,
+})
 -- map.n('<leader>wa', vim.lsp.buf.add_workspace_folder, "LSP: [W]orkspace [A]dd Folder")
 -- map.n('<leader>wr', vim.lsp.buf.remove_workspace_folder, "LSP: [W]orkspace [R]emove Folder")
 -- map.n('<leader>wl', function()
