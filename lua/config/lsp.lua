@@ -31,7 +31,7 @@ cmp.setup({
     }),
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
-        -- { name = 'vsnip' }, -- For vsnip users.
+        { name = 'vsnip' }, -- For vsnip users.
         { name = 'luasnip' }, -- For luasnip users.
         -- { name = 'ultisnips' }, -- For ultisnips users.
         -- { name = 'snippy' }, -- For snippy users.
@@ -152,6 +152,7 @@ lspconfig.clangd.setup {}
 lspconfig.zls.setup {}
 lspconfig.pyright.setup {}
 lspconfig.nil_ls.setup{}
+lspconfig.mesonlsp.setup{}
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
