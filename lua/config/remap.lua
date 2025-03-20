@@ -33,6 +33,8 @@ map.v("<leader>vp", "\"_dP", "[V]oid [P]aste")
 map.n("<leader>fe", ":Telescope file_browser<cr>", "[F]ile [E]xplorer")
 map.n("<leader>bq", ":BufferCloseAllButVisible<cr>", "[B]uffer [Q]uit All but Visible")
 map.n("<leader>u", vim.cmd.UndotreeToggle, "[U]ndotree")
+map.n("<leader>dv", ":DiffviewOpen<cr>", "[D]iff[V]iew open")
+map.n("<leader>fto", ":%s/\\(typeof\\|nameof\\)( \\(.\\{-}\\) )/\\1(\\2)<cr>", "[F]ix [T]ype[O]f")
 
 -- Bufferline
 map.n("<A-h>", ":BufferPrevious<cr>", "Previous buffer")
