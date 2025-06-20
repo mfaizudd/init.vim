@@ -60,12 +60,20 @@ map.n("K", vim.lsp.buf.hover, "LSP: [K]eyword")
 map.n("gi", vim.lsp.buf.implementation, "LSP: [G]o to [I]mplementation")
 map.n("<C-k>", vim.lsp.buf.signature_help, "LSP: [C]ompletion [K]eyword")
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "cs",
-  callback = function(event)
-    vim.keymap.set("n", "gd", require("omnisharp_extended").telescope_lsp_definition, { buffer = event.buf })
-  end,
+    pattern = "cs",
+    callback = function(event)
+        vim.keymap.set("n", "gd", require("omnisharp_extended").telescope_lsp_definition, { buffer = event.buf })
+    end,
 })
--- map.n('<leader>wa', vim.lsp.buf.add_workspace_folder, "LSP: [W]orkspace [A]dd Folder")
+
+-- Copilot keymaps
+vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
+    expr = true,
+    replace_keycodes = false,
+    desc = "Accepet Copilot suggestion",
+})
+vim.g.copilot_no_tab_map = true
+-- map.n('<leader>wa', vim.lsp.buf.add_workspace_folder, "LSP: orkspace [A]dd Folder")
 -- map.n('<leader>wr', vim.lsp.buf.remove_workspace_folder, "LSP: [W]orkspace [R]emove Folder")
 -- map.n('<leader>wl', function()
 --     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))

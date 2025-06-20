@@ -13,6 +13,7 @@ vim.opt.colorcolumn="80"
 vim.opt.title=true
 vim.opt.autowriteall=true
 require("config")
+vim.cmd("Copilot disable")
 -- vim.opt.nowrap=true
 -- lua require('plugins')
 -- lua require('lsp')
