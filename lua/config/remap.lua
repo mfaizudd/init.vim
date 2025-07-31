@@ -59,12 +59,6 @@ map.n("gd", vim.lsp.buf.definition, "LSP: [G]o to [D]efinition")
 map.n("K", vim.lsp.buf.hover, "LSP: [K]eyword")
 map.n("gi", vim.lsp.buf.implementation, "LSP: [G]o to [I]mplementation")
 map.n("<C-k>", vim.lsp.buf.signature_help, "LSP: [C]ompletion [K]eyword")
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = "cs",
-    callback = function(event)
-        vim.keymap.set("n", "gd", require("omnisharp_extended").telescope_lsp_definition, { buffer = event.buf })
-    end,
-})
 
 -- Copilot keymaps
 vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {

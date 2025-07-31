@@ -19,11 +19,11 @@ return {
     { 'rafamadriz/friendly-snippets' },
     { 'hrsh7th/vim-vsnip' },
     { 'hrsh7th/cmp-vsnip' },
-    {
-        "ray-x/lsp_signature.nvim",
-        event = "InsertEnter",
-        opts = {
-            -- cfg options
-        },
-    }
+    -- {
+    --     "ray-x/lsp_signature.nvim",
+    --     event = "InsertEnter",
+    --     opts = {
+    --         -- cfg options
+    --     },
+    -- }
 }

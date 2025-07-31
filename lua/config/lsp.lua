@@ -104,48 +104,68 @@ lspconfig.lua_ls.setup {
     }
 }
 
-lspconfig.omnisharp.setup {
-    cmd = { "omnisharp" },
+-- lspconfig.omnisharp.setup {
+--     cmd = { "omnisharp" },
+--
+--     settings = {
+--         FormattingOptions = {
+--             -- Enables support for reading code style, naming convention and analyzer
+--             -- settings from .editorconfig.
+--             EnableEditorConfigSupport = true,
+--             -- Specifies whether 'using' directives should be grouped and sorted during
+--             -- document formatting.
+--             OrganizeImports = true,
+--         },
+--         MsBuild = {
+--             -- If true, MSBuild project system will only load projects for files that
+--             -- were opened in the editor. This setting is useful for big C# codebases
+--             -- and allows for faster initialization of code navigation features only
+--             -- for projects that are relevant to code that is being edited. With this
+--             -- setting enabled OmniSharp may load fewer projects and may thus display
+--             -- incomplete reference lists for symbols.
+--             LoadProjectsOnDemand = nil,
+--         },
+--         RoslynExtensionsOptions = {
+--             -- Enables support for roslyn analyzers, code fixes and rulesets.
+--             EnableAnalyzersSupport = true,
+--             -- Enables support for showing unimported types and unimported extension
+--             -- methods in completion lists. When committed, the appropriate using
+--             -- directive will be added at the top of the current file. This option can
+--             -- have a negative impact on initial completion responsiveness,
+--             -- particularly for the first few completion sessions after opening a
+--             -- solution.
+--             EnableImportCompletion = true,
+--             -- Only run analyzers against open files when 'enableRoslynAnalyzers' is
+--             -- true
+--             AnalyzeOpenDocumentsOnly = true,
+--         },
+--         Sdk = {
+--             -- Specifies whether to include preview versions of the .NET SDK when
+--             -- determining which version to use for project loading.
+--             IncludePrereleases = false,
+--         },
+--     },
+-- }
 
+vim.lsp.config("roslyn", {
     settings = {
-        FormattingOptions = {
-            -- Enables support for reading code style, naming convention and analyzer
-            -- settings from .editorconfig.
-            EnableEditorConfigSupport = true,
-            -- Specifies whether 'using' directives should be grouped and sorted during
-            -- document formatting.
-            OrganizeImports = true,
+        ["csharp|inlay_hints"] = {
+            csharp_enable_inlay_hints_for_implicit_object_creation = true,
+            csharp_enable_inlay_hints_for_implicit_variable_types = true,
+            dotnet_enable_inlay_hints_for_parameters = true,
         },
-        MsBuild = {
-            -- If true, MSBuild project system will only load projects for files that
-            -- were opened in the editor. This setting is useful for big C# codebases
-            -- and allows for faster initialization of code navigation features only
-            -- for projects that are relevant to code that is being edited. With this
-            -- setting enabled OmniSharp may load fewer projects and may thus display
-            -- incomplete reference lists for symbols.
-            LoadProjectsOnDemand = nil,
+        ["csharp|code_lens"] = {
+            dotnet_enable_references_code_lens = true,
         },
-        RoslynExtensionsOptions = {
-            -- Enables support for roslyn analyzers, code fixes and rulesets.
-            EnableAnalyzersSupport = false,
-            -- Enables support for showing unimported types and unimported extension
-            -- methods in completion lists. When committed, the appropriate using
-            -- directive will be added at the top of the current file. This option can
-            -- have a negative impact on initial completion responsiveness,
-            -- particularly for the first few completion sessions after opening a
-            -- solution.
-            EnableImportCompletion = true,
-            -- Only run analyzers against open files when 'enableRoslynAnalyzers' is
-            -- true
-            AnalyzeOpenDocumentsOnly = true,
+        ["csharp|completion"] = {
+            dotnet_show_completion_items_from_unimported_namespaces = true,
+            dotnet_show_name_completion_suggestions = true,
         },
-        Sdk = {
-            -- Specifies whether to include preview versions of the .NET SDK when
-            -- determining which version to use for project loading.
-            IncludePrereleases = true,
+        ["csharp|symbol_search"] = {
+            dotnet_search_reference_assemblies = true,
         },
     },
-}
+})
 
 lspconfig.lemminx.setup {}
 lspconfig.clangd.setup {}
@@ -172,7 +192,12 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set('n', 'gi', '<cmd>Telescope lsp_implementations<cr>', { buffer = bufnr })
 end)
 
-require('mason').setup({})
+require('mason').setup({
+    registries = {
+        "github:mason-org/mason-registry",
+        "github:Crashdummyy/mason-registry",
+    },
+})
 require('mason-lspconfig').setup({
     ensure_installed = {},
     handlers = {
