@@ -34,6 +34,8 @@ map.n("<leader>fe", ":Telescope file_browser<cr>", "[F]ile [E]xplorer")
 map.n("<leader>bq", ":BufferCloseAllButVisible<cr>", "[B]uffer [Q]uit All but Visible")
 map.n("<leader>u", vim.cmd.UndotreeToggle, "[U]ndotree")
 map.n("<leader>fto", ":%s/\\(typeof\\|nameof\\)( \\(.\\{-}\\) )/\\1(\\2)<cr>", "[F]ix [T]ype[O]f")
+map.n("<leader>hm", require("harpoon.mark").add_file, "[H]arpoon [M]ark")
+map.n("<leader>hp", require("harpoon.ui").toggle_quick_menu, "[H]ar[P]oon")
 
 -- Bufferline
 map.n("<A-h>", ":BufferPrevious<cr>", "Previous buffer")
